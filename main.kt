@@ -207,44 +207,6 @@ fun criaTabuleiroVazio(numLinhas: Int, numColunas: Int): Array<Array<Char?>> {
     return Array(numColunas) { arrayOfNulls<Char?>(numLinhas) }
 }
 
-// função que cria uma legenda horizontal para o tabuleiro, que mete cada coluna com uma letra
-fun criaLegendaHorizontal(numColunas: Int): String {
-    var legenda = "" // inicializa a string da legenda
-    var coluna = 0 // contador para iterar sobre as colunas
-    val letra = 65 // código ASCII para a letra 'A'
-
-    while (coluna < numColunas) {
-        // adiciona a letra correspondente à coluna atual à legenda
-        legenda += (letra + coluna).toChar()
-
-        // se não for a última coluna, adiciona o separador
-        if (coluna + 1 != numColunas) {
-            legenda += " | "
-        }
-
-        coluna++ // incrementa o contador de coluna
-    }
-
-    return legenda // retorna a legenda completa
-}
-
-//função que cria o terreno optei por não usar nesta parte passei assim as suas funcionalidades para a obtemmapa por questões de simplicidade
-fun criaTerreno(numLinhas: Int, numColunas: Int): String {
-    if (numColunas < 1 || numColunas > 26 || numLinhas < 1) return "Parametros invalidos"
-
-    val cabecalho = "\n| " + criaLegendaHorizontal(numColunas) + " |\n"
-    var tabuleiro = ""
-
-    for (linha in 0 until numLinhas) {
-        for (coluna in 0 until numColunas) {
-            tabuleiro += "| ~ "
-        }
-        tabuleiro += "| ${linha + 1}\n"
-    }
-
-    return cabecalho + tabuleiro
-}
-
 // função responsável por criar uma representação visual do tabuleiro/ implementado com a logica da criaterreno
 fun obtemMapa(tabuleiro: Array<Array<Char?>>, tabuleiroCerto: Boolean): Array<String> {
     // determina o número de linhas e colunas do tabuleiro

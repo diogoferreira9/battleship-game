@@ -1010,8 +1010,8 @@ fun menuJogar(): Int {
 
         // gera um tiro aleatório para o computador
         val tiroComputador = geraTiroComputador(tabuleiroPalpitesDoComputador)
-        //val letraColuna = (tiroComputador.second - 1 + 'A'.toInt()).toChar()
-        println("Computador lançou tiro para a posição (${tiroComputador.first},${tiroComputador.second})")  //${letraColuna}
+        val letraColuna = (tiroComputador.second - 1 + 'A'.toInt()).toChar()
+        println("Computador lançou tiro para a posição (${tiroComputador.first},${letraColuna})")
         // processa o tiro do computador e exibe o resultado
         val elementoTabuleiro = tabuleiroHumano[tiroComputador.first - 1][tiroComputador.second - 1]
         when (elementoTabuleiro) {

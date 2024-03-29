@@ -1,7 +1,7 @@
 # Battleship Game
 
 ## Overview
-Batalha Naval, or Battleship, is a strategy-type guessing game traditionally played on grid paper. This implementation of the game is a digital version developed in Kotlin, aimed at providing an interactive and engaging experience for users. The game supports single-player mode against the computer, offering features like ship placement, gameplay, saving, and loading game states.
+Battleship is a strategy-type guessing game traditionally played on grid paper. This implementation of the game is a digital version developed in Kotlin, aimed at providing an interactive and engaging experience for users. The game supports single-player mode against the computer, offering features like ship placement, gameplay, saving, and loading game states.
 
 ## Features
 - **Flexible Board Configuration**: Users can define the board's size within the constraints of the game rules.
